@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Thai's test</title>
+    <title>Test sending requests other website</title>
 </head>
 <body>
-    <h1>Gửi 10 Yêu Cầu Đến Trang Web Khác</h1>
-    
-    <button id="myButton">Gửi Yêu Cầu</button>
-    
+    <h1>xin chao</h1>
+
     <script>
-        // Lấy tham chiếu đến nút bấm bằng ID
-        var button = document.getElementById("myButton");
-        
-        // Thêm sự kiện click cho nút bấm
-        button.addEventListener("click", function() {
-            // Lặp qua 10 lần để gửi 10 yêu cầu
+        // Hàm gửi yêu cầu
+        function sendRequests() {
             for (var i = 0; i < 10; i++) {
-                // Sử dụng đối tượng XMLHttpRequest để gửi yêu cầu GET đến trang web khác
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", "https://remote.sonic.com.vn", true);
                 xhr.send();
             }
-            
-            // Thông báo khi đã hoàn thành
-            alert("Đã gửi 10 yêu cầu đến trang web khác.");
-        });
+            console.log("Đã gửi 10 yêu cầu đến trang web khác.");
+        }
+
+        // Gọi hàm gửi yêu cầu khi trang web được tải
+        window.onload = sendRequests;
     </script>
 </body>
 </html>
+
